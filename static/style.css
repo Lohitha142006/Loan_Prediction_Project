@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#050816;
+color:white;
+overflow-x:hidden;
+min-height:100vh;
+}
+
+/* Animated Background */
+
+.animated-bg{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:
+radial-gradient(circle at 20% 20%, rgba(0,245,255,0.18), transparent 25%),
+radial-gradient(circle at 80% 80%, rgba(123,44,255,0.18), transparent 25%),
+radial-gradient(circle at 60% 40%, rgba(255,0,255,0.12), transparent 20%);
+animation:bgMove 12s infinite alternate ease-in-out;
+z-index:-1;
+}
+
+@keyframes bgMove{
+0%{
+transform:scale(1);
+}
+100%{
+transform:scale(1.15);
+}
+}
+
+/* Sidebar */
+
+.sidebar{
+position:fixed;
+left:0;
+top:0;
+width:260px;
+height:100vh;
+background:rgba(13,19,36,.95);
+border-right:1px solid rgba(0,245,255,.2);
+padding:30px;
+backdrop-filter:blur(15px);
+}
+
+.logo{
+font-size:28px;
+font-weight:700;
+color:#00f5ff;
+margin-bottom:40px;
+text-align:center;
+}
+
+.sidebar ul{
+list-style:none;
+padding-left:0;
+}
+
+.sidebar li{
+padding:15px;
+margin-bottom:12px;
+border-radius:12px;
+cursor:pointer;
+transition:.3s;
+font-size:15px;
+}
+
+.sidebar li:hover{
+background:rgba(0,245,255,.15);
+transform:translateX(8px);
+color:#00f5ff;
+}
+
+/* Main Area */
+
+.main-content{
+margin-left:280px;
+padding:30px;
+}
+
+.main-title{
+font-size:42px;
+font-weight:800;
+background:linear-gradient(
+90deg,
+#00f5ff,
+#7b2cff,
+#00f5ff
+);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+margin-bottom:25px;
+}
+
+/* Glass Cards */
+
+.glass-card{
+background:rgba(255,255,255,.05);
+backdrop-filter:blur(20px);
+border:1px solid rgba(255,255,255,.08);
+border-radius:25px;
+padding:25px;
+box-shadow:
+0 0 25px rgba(0,245,255,.15),
+0 0 40px rgba(123,44,255,.08);
+margin-bottom:20px;
+transition:.3s;
+}
+
+.glass-card:hover{
+transform:translateY(-4px);
+box-shadow:
+0 0 30px rgba(0,245,255,.25),
+0 0 50px rgba(123,44,255,.15);
+}
+
+.section-title{
+margin-bottom:20px;
+color:#00f5ff;
+font-weight:600;
+}
+
+/* Form Elements */
+
+label{
+font-size:14px;
+margin-bottom:5px;
+margin-top:8px;
+display:block;
+}
+
+input,
+select{
+width:100%;
+padding:12px;
+border:none;
+outline:none;
+border-radius:12px;
+background:#0f172a;
+color:white;
+margin-bottom:12px;
+transition:.3s;
+}
+
+input:focus,
+select:focus{
+box-shadow:0 0 15px #00f5ff;
+}
+
+/* Button */
+
+.predict-btn{
+width:100%;
+padding:14px;
+border:none;
+border-radius:15px;
+background:linear-gradient(
+90deg,
+#00f5ff,
+#7b2cff
+);
+color:white;
+font-weight:700;
+font-size:16px;
+margin-top:10px;
+transition:.3s;
+}
+
+.predict-btn:hover{
+transform:translateY(-3px);
+box-shadow:0 0 25px #00f5ff;
+}
+
+/* Statistics Cards */
+
+.stat-card{
+background:#0f172a;
+border-radius:18px;
+padding:18px;
+text-align:center;
+margin-bottom:15px;
+border:1px solid rgba(0,245,255,.15);
+}
+
+.stat-value{
+font-size:30px;
+font-weight:800;
+color:#00f5ff;
+}
+
+.stat-label{
+font-size:14px;
+color:#d1d5db;
+}
+
+/* Result Area */
+
+.result-card{
+margin-top:25px;
+padding:25px;
+border-radius:25px;
+background:#0f172a;
+text-align:center;
+border:1px solid rgba(0,245,255,.2);
+}
+
+.result-card h2{
+font-weight:800;
+color:#00f5ff;
+}
+
+.result-card h4{
+color:#7b2cff;
+margin-bottom:15px;
+}
+
+/* Circular Gauge */
+
+.gauge-container{
+position:relative;
+width:250px;
+height:250px;
+margin:auto;
+margin-top:15px;
+}
+
+.gauge-text{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+font-size:34px;
+font-weight:800;
+color:#00f5ff;
+}
+
+/* AI Score Box */
+
+.score-box{
+margin-top:20px;
+padding:15px;
+border-radius:15px;
+background:rgba(0,245,255,.08);
+}
+
+.score-box h2{
+font-size:28px;
+font-weight:800;
+}
+
+/* Dashboard Images */
+
+.dashboard-img{
+width:100%;
+border-radius:15px;
+margin-top:10px;
+transition:.3s;
+}
+
+.dashboard-img:hover{
+transform:scale(1.03);
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+width:8px;
+}
+
+::-webkit-scrollbar-thumb{
+background:#00f5ff;
+border-radius:10px;
+}
+
+/* Mobile Responsive */
+
+@media(max-width:991px){
+
+.sidebar{
+display:none;
+}
+
+.main-content{
+margin-left:0;
+padding:15px;
+}
+
+.main-title{
+font-size:28px;
+text-align:center;
+}
+
+.gauge-container{
+width:220px;
+height:220px;
+}
+
+}
